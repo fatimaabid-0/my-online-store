@@ -1,0 +1,317 @@
+/* =================================
+   F&M STORE - MAIN STYLESHEET
+   ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #fff8f4, #fff1f5);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #555;
+    min-height: 100vh;
+}
+
+/* =================================
+   MAIN HEADINGS
+   ================================= */
+
+h1 {
+    color: #c86b85;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #7a5c61;
+    margin-top: 10px;
+}
+
+h3 {
+    color: #5f5053;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* =================================
+   HOMEPAGE
+   ================================= */
+
+.home-hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.home-content {
+    max-width: 750px;
+    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 35px;
+    box-shadow: 0 15px 45px rgba(180, 120, 140, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+.home-content h1 {
+    font-size: 64px;
+    margin: 0 0 10px;
+}
+
+.home-tagline {
+    color: #8b6570;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.home-description {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Decorative text */
+
+.decorative {
+    color: #d98b9d;
+    font-size: 25px;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   STORE BUTTON
+   ================================= */
+
+.store-button {
+    display: inline-block;
+    background: #c86b85;
+    color: white;
+    padding: 14px 34px;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(200, 107, 133, 0.25);
+    transition: all 0.3s ease;
+}
+
+.store-button:hover {
+    background: #a9526c;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(200, 107, 133, 0.3);
+}
+
+/* =================================
+   COLLECTION / PRODUCT TABLES
+   ================================= */
+
+table {
+    margin: 30px auto;
+    border-spacing: 28px 35px;
+}
+
+/* =================================
+   PRODUCT IMAGES
+   ================================= */
+
+img {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(180, 120, 140, 0.18);
+}
+
+/* =================================
+   PRODUCT CARDS
+   ================================= */
+
+.product-card {
+    background: white;
+    border-radius: 22px;
+    padding: 20px;
+    box-shadow: 0 5px 18px rgba(180, 120, 140, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(180, 120, 140, 0.2);
+}
+
+/* =================================
+   PRODUCT PRICE
+   ================================= */
+
+.price {
+    color: #c86b85;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* =================================
+   LINKS
+   ================================= */
+
+a {
+    text-decoration: none;
+    color: #c86b85;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8b4f61;
+}
+
+/* =================================
+   GENERAL BUTTONS
+   ================================= */
+
+button {
+    background: #f8a9a9;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #d98b8b;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   ADD TO CART
+   ================================= */
+
+.add-cart {
+    background: #c86b85;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.add-cart:hover {
+    background: #a9526c;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   CART BUTTON
+   ================================= */
+
+.cart-button {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    background: #c86b85;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(200, 107, 133, 0.25);
+}
+
+.cart-button:hover {
+    background: #a9526c;
+    transform: scale(1.05);
+}
+
+/* =================================
+   BACK BUTTON
+   ================================= */
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    background: #f8a9a9;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #d98b8b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+   ================================= */
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    table {
+        border-spacing: 10px;
+        width: 100%;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+    .home-content {
+        padding: 45px 25px;
+    }
+
+    .home-content h1 {
+        font-size: 45px;
+    }
+
+    .home-tagline {
+        font-size: 18px;
+    }
+
+    .home-description {
+        font-size: 16px;
+    }
+
+    .cart-button {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+    }
+}

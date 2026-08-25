@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flower Collection - F&M Store</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .collection-header {
+            padding: 30px 20px 10px;
+        }
+
+        .collection-header h1 {
+            margin-bottom: 10px;
+        }
+
+        .collection-header p {
+            max-width: 650px;
+            margin: 15px auto;
+        }
+
+        .collection {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 18px;
+            border-radius: 24px;
+            box-shadow: 0 7px 22px rgba(180, 120, 140, 0.13);
+            transition: all 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(180, 120, 140, 0.22);
+        }
+
+        .product img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .product h2 {
+            color: #7a5c61;
+            font-size: 19px;
+            margin: 16px 0 8px;
+        }
+
+        .product p {
+            color: #777;
+            font-size: 15px;
+            margin: 5px 0 10px;
+        }
+
+        .product h3 {
+            color: #c86b85;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .add-cart {
+            width: 100%;
+            margin-top: 8px;
+            background: #c86b85;
+        }
+
+        .add-cart:hover {
+            background: #a9526c;
+        }
+
+        .bottom-navigation {
+            margin: 20px 0 50px;
+        }
+
+        @media (max-width: 1000px) {
+
+            .collection {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .collection {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .product img {
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="collection-header">
+
+        <h1>🌸 Flower Collection</h1>
+
+        <h2>
+            F&amp;M Store – Curated with love by Fatima &amp; Manahil
+        </h2>
+
+        <p>
+            Beautiful bouquets and floral arrangements to make
+            every moment feel a little more special 🌷
+        </p>
+
+    </div>
+
+
+    <div class="collection">
+
+
+        <!-- FLOWER 1 -->
+
+        <div class="product">
+
+            <img src="images/flower1.jpg">
+
+            <h2>Mini Rose Cones</h2>
+
+            <p>Sweet and delicate rose arrangement</p>
+
+            <h3>Rs. 1,800</h3>
+
+            <button
+                class="add-cart"
+                data-name="Mini Rose Cones"
+                data-price="1800"
+                data-image="images/flower1.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 2 -->
+
+        <div class="product">
+
+            <img src="images/flower2.jpg">
+
+            <h2>Crochet Flower Bouquet</h2>
+
+            <p>Handmade flowers that last forever</p>
+
+            <h3>Rs. 1,950</h3>
+
+            <button
+                class="add-cart"
+                data-name="Crochet Flower Bouquet"
+                data-price="1950"
+                data-image="images/flower2.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 3 -->
+
+        <div class="product">
+
+            <img src="images/flower3.jpg">
+
+            <h2>Pink Rose Bouquet</h2>
+
+            <p>Pretty pink roses for every occasion</p>
+
+            <h3>Rs. 2,100</h3>
+
+            <button
+                class="add-cart"
+                data-name="Pink Rose Bouquet"
+                data-price="2100"
+                data-image="images/flower3.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 4 -->
+
+        <div class="product">
+
+            <img src="images/flower4.jpg">
+
+            <h2>Red Rose Bouquet</h2>
+
+            <p>Classic red roses beautifully arranged</p>
+
+            <h3>Rs. 1,700</h3>
+
+            <button
+                class="add-cart"
+                data-name="Red Rose Bouquet"
+                data-price="1700"
+                data-image="images/flower4.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 5 -->
+
+        <div class="product">
+
+            <img src="images/flower5.jpg">
+
+            <h2>Pink &amp; White Rose Bouquet</h2>
+
+            <p>A soft and elegant floral combination</p>
+
+            <h3>Rs. 2,250</h3>
+
+            <button
+                class="add-cart"
+                data-name="Pink & White Rose Bouquet"
+                data-price="2250"
+                data-image="images/flower5.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 6 -->
+
+        <div class="product">
+
+            <img src="images/flower6.jpg">
+
+            <h2>Mixed Flower Bouquet</h2>
+
+            <p>A colorful mix of beautiful flowers</p>
+
+            <h3>Rs. 1,850</h3>
+
+            <button
+                class="add-cart"
+                data-name="Mixed Flower Bouquet"
+                data-price="1850"
+                data-image="images/flower6.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 7 -->
+
+        <div class="product">
+
+            <img src="images/flower7.jpg">
+
+            <h2>White Floral Cones</h2>
+
+            <p>Elegant white flowers for a timeless look</p>
+
+            <h3>Rs. 1,600</h3>
+
+            <button
+                class="add-cart"
+                data-name="White Floral Cones"
+                data-price="1600"
+                data-image="images/flower7.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- FLOWER 8 -->
+
+        <div class="product">
+
+            <img src="images/flower8.jpg">
+
+            <h2>Orange Tulip Arrangement</h2>
+
+            <p>Bright and cheerful tulip arrangement</p>
+
+            <h3>Rs. 2,300</h3>
+
+            <button
+                class="add-cart"
+                data-name="Orange Tulip Arrangement"
+                data-price="2300"
+                data-image="images/flower8.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom-navigation">
+
+        <a href="shop.html" class="back-button">
+            ← Back to Shop
+        </a>
+
+    </div>
+
+
+    <!-- SHOPPING CART -->
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Candle Collection - F&M Store</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .collection-header {
+            padding: 30px 20px 10px;
+        }
+
+        .collection-header h1 {
+            margin-bottom: 10px;
+        }
+
+        .collection-header p {
+            max-width: 650px;
+            margin: 15px auto;
+        }
+
+        .collection {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .product {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 18px;
+            border-radius: 24px;
+            box-shadow: 0 7px 22px rgba(180, 120, 140, 0.13);
+            transition: all 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(180, 120, 140, 0.22);
+        }
+
+        .product img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .product h2 {
+            color: #7a5c61;
+            font-size: 19px;
+            margin: 16px 0 8px;
+        }
+
+        .product p {
+            color: #777;
+            font-size: 15px;
+            margin: 5px 0 10px;
+        }
+
+        .product h3 {
+            color: #c86b85;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .add-cart {
+            width: 100%;
+            margin-top: 8px;
+            background: #c86b85;
+        }
+
+        .add-cart:hover {
+            background: #a9526c;
+        }
+
+        .bottom-navigation {
+            margin: 20px 0 50px;
+        }
+
+        @media (max-width: 1000px) {
+
+            .collection {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .collection {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .product img {
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="collection-header">
+
+        <h1>🕯️ Candle Collection</h1>
+
+        <h2>
+            F&amp;M Store – Curated with love by Fatima &amp; Manahil
+        </h2>
+
+        <p>
+            Cozy candles to add warmth, beauty and a little magic
+            to your space ✨
+        </p>
+
+    </div>
+
+
+    <div class="collection">
+
+
+        <!-- CANDLE 1 -->
+
+        <div class="product">
+
+            <img src="images/candle1.jpg">
+
+            <h2>Blue Lotus Candle</h2>
+
+            <p>Elegant floral-inspired candle</p>
+
+            <h3>Rs. 1,250</h3>
+
+            <button
+                class="add-cart"
+                data-name="Blue Lotus Candle"
+                data-price="1250"
+                data-image="images/candle1.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 2 -->
+
+        <div class="product">
+
+            <img src="images/candle2.jpg">
+
+            <h2>Black Oudh Candle</h2>
+
+            <p>Rich and luxurious scented candle</p>
+
+            <h3>Rs. 1,350</h3>
+
+            <button
+                class="add-cart"
+                data-name="Black Oudh Candle"
+                data-price="1350"
+                data-image="images/candle2.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 3 -->
+
+        <div class="product">
+
+            <img src="images/candle3.jpg">
+
+            <h2>Woodland Glow Candle</h2>
+
+            <p>Warm woodland-inspired glow</p>
+
+            <h3>Rs. 1,400</h3>
+
+            <button
+                class="add-cart"
+                data-name="Woodland Glow Candle"
+                data-price="1400"
+                data-image="images/candle3.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 4 -->
+
+        <div class="product">
+
+            <img src="images/candle4.jpg">
+
+            <h2>Blush Candle Gift Set</h2>
+
+            <p>Pretty candle set perfect for gifting</p>
+
+            <h3>Rs. 1,300</h3>
+
+            <button
+                class="add-cart"
+                data-name="Blush Candle Gift Set"
+                data-price="1300"
+                data-image="images/candle4.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 5 -->
+
+        <div class="product">
+
+            <img src="images/candle5.jpg">
+
+            <h2>Classic Pillar Candles</h2>
+
+            <p>Simple and timeless candle set</p>
+
+            <h3>Rs. 1,100</h3>
+
+            <button
+                class="add-cart"
+                data-name="Classic Pillar Candles"
+                data-price="1100"
+                data-image="images/candle5.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 6 -->
+
+        <div class="product">
+
+            <img src="images/candle6.jpg">
+
+            <h2>Marble Glow Candle Set</h2>
+
+            <p>Elegant marble-inspired candle set</p>
+
+            <h3>Rs. 1,250</h3>
+
+            <button
+                class="add-cart"
+                data-name="Marble Glow Candle Set"
+                data-price="1250"
+                data-image="images/candle6.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 7 -->
+
+        <div class="product">
+
+            <img src="images/candle7.jpg">
+
+            <h2>Pastel Bubble Candle Collection</h2>
+
+            <p>Fun pastel candles for a cute space</p>
+
+            <h3>Rs. 1,450</h3>
+
+            <button
+                class="add-cart"
+                data-name="Pastel Bubble Candle Collection"
+                data-price="1450"
+                data-image="images/candle7.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- CANDLE 8 -->
+
+        <div class="product">
+
+            <img src="images/candle8.jpg">
+
+            <h2>Ocean Shell Candle Tray</h2>
+
+            <p>Beautiful coastal-inspired candle design</p>
+
+            <h3>Rs. 1,500</h3>
+
+            <button
+                class="add-cart"
+                data-name="Ocean Shell Candle Tray"
+                data-price="1500"
+                data-image="images/candle8.jpg">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom-navigation">
+
+        <a href="shop.html" class="back-button">
+            ← Back to Shop
+        </a>
+
+    </div>
+
+
+    <!-- SHOPPING CART -->
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

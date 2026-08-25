@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkout - F&M Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🛍️ Checkout</h1>
+
+    <h2>F&M Store – Curated with love by Fatima &amp; Manahil</h2>
+
+    <br>
+
+    <div style="
+        width: 90%;
+        max-width: 600px;
+        margin: auto;
+        background: #fff8f4;
+        padding: 25px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    ">
+
+        <h2>Your Order 💗</h2>
+
+        <div id="checkoutItems"></div>
+
+        <hr>
+
+        <h2 id="checkoutTotal"></h2>
+
+        <br>
+
+        <h2>Delivery Details 📦</h2>
+
+        <label>Your Name</label>
+        <br>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your name"
+            style="
+                width:100%;
+                padding:10px;
+                margin:8px 0 15px;
+                box-sizing:border-box;
+            "
+        >
+
+        <label>Phone Number</label>
+        <br>
+
+        <input
+            type="text"
+            id="customerPhone"
+            placeholder="Enter your phone number"
+            style="
+                width:100%;
+                padding:10px;
+                margin:8px 0 15px;
+                box-sizing:border-box;
+            "
+        >
+
+        <label>Delivery Address</label>
+        <br>
+
+        <textarea
+            id="customerAddress"
+            placeholder="Enter your complete delivery address"
+            rows="4"
+            style="
+                width:100%;
+                padding:10px;
+                margin:8px 0 15px;
+                box-sizing:border-box;
+            "
+        ></textarea>
+
+        <button
+            onclick="placeOrder()"
+            style="
+                width:100%;
+                padding:12px;
+                font-size:16px;
+                cursor:pointer;
+            "
+        >
+            💗 Place Order
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function showCheckoutItems() {
+
+            const itemsBox =
+                document.getElementById("checkoutItems");
+
+            const totalBox =
+                document.getElementById("checkoutTotal");
+
+            let cart =
+                JSON.parse(localStorage.getItem("fmCart")) || [];
+
+
+            if (cart.length === 0) {
+
+                itemsBox.innerHTML = `
+                    <p>Your cart is empty 💗</p>
+                `;
+
+                totalBox.innerHTML = "Total: Rs. 0";
+
+                return;
+            }
+
+
+            let html = "";
+
+
+            cart.forEach(function(product) {
+
+                html += `
+                    <div style="
+                        display:flex;
+                        align-items:center;
+                        gap:15px;
+                        background:white;
+                        padding:12px;
+                        margin-bottom:10px;
+                        border-radius:15px;
+                    ">
+
+                        <img
+                            src="${product.image}"
+                            style="
+                                width:70px;
+                                height:70px;
+                                object-fit:cover;
+                                border-radius:10px;
+                            "
+                        >
+
+                        <div>
+
+                            <strong>
+                                ${product.name}
+                            </strong>
+
+                            <p style="margin:5px 0;">
+                                Quantity: ${product.quantity}
+                            </p>
+
+                            <p style="margin:0;">
+                                Rs.
+                                ${(product.price * product.quantity).toLocaleString()}
+                            </p>
+
+                        </div>
+
+                    </div>
+                `;
+
+            });
+
+
+            itemsBox.innerHTML = html;
+
+
+            let total = cart.reduce(function(sum, product) {
+
+                return sum +
+                    (product.price * product.quantity);
+
+            }, 0);
+
+
+            totalBox.innerHTML =
+                "Total: Rs. " +
+                total.toLocaleString();
+        }
+
+
+
+        function placeOrder() {
+
+            const name =
+                document
+                .getElementById("customerName")
+                .value
+                .trim();
+
+
+            const phone =
+                document
+                .getElementById("customerPhone")
+                .value
+                .trim();
+
+
+            const address =
+                document
+                .getElementById("customerAddress")
+                .value
+                .trim();
+
+
+            if (!name || !phone || !address) {
+
+                alert(
+                    "Please fill in all delivery details. 💗"
+                );
+
+                return;
+            }
+
+
+            let cart =
+                JSON.parse(localStorage.getItem("fmCart")) || [];
+
+
+            if (cart.length === 0) {
+
+                alert("Your cart is empty!");
+
+                return;
+            }
+
+
+            /* CREATE ORDER MESSAGE */
+
+            let orderMessage =
+                "🛍️ NEW F&M STORE ORDER\n\n";
+
+
+            orderMessage +=
+                "👤 Customer: " +
+                name +
+                "\n";
+
+
+            orderMessage +=
+                "📱 Phone: " +
+                phone +
+                "\n";
+
+
+            orderMessage +=
+                "📍 Address: " +
+                address +
+                "\n\n";
+
+
+            orderMessage +=
+                "🛒 ORDER DETAILS\n\n";
+
+
+            cart.forEach(function(product) {
+
+                const productTotal =
+                    product.price *
+                    product.quantity;
+
+
+                orderMessage +=
+                    "• " +
+                    product.name +
+                    "\n";
+
+
+                orderMessage +=
+                    "  Quantity: " +
+                    product.quantity +
+                    "\n";
+
+
+                orderMessage +=
+                    "  Price: Rs. " +
+                    productTotal.toLocaleString() +
+                    "\n\n";
+
+            });
+
+
+            let total = cart.reduce(function(sum, product) {
+
+                return sum +
+                    (product.price * product.quantity);
+
+            }, 0);
+
+
+            orderMessage +=
+                "💰 TOTAL: Rs. " +
+                total.toLocaleString() +
+                "\n\n";
+
+
+            orderMessage +=
+                "Thank you for shopping with F&M Store! 💗";
+
+
+            /* YOUR WHATSAPP NUMBER */
+
+            const whatsappNumber =
+                "923177883121";
+
+
+            /*
+            ENCODE THE ENTIRE MESSAGE
+            SO WHATSAPP RECEIVES IT CORRECTLY
+            */
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(orderMessage);
+
+
+            /* OPEN WHATSAPP */
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            /* CLEAR CART */
+
+            localStorage.removeItem("fmCart");
+
+        }
+
+
+
+        /* LOAD CHECKOUT ITEMS */
+
+        showCheckoutItems();
+
+    </script>
+
+</body>
+
+</html>
